@@ -1,0 +1,29 @@
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .socialconnection{
+    color: transparent; 
+    min-height:10px; 
+    max-height:80px; 
+    min-width:60px; 
+    max-width:120px;
+    margin-left:5%;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+
+  footer{
+    background-color: black;
+  }

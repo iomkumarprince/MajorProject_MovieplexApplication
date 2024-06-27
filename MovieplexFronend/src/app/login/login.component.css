@@ -1,0 +1,64 @@
+body {
+  background-color: #222;
+  color: #fff; 
+  font-family: Arial, sans-serif;
+}
+
+
+/* Form container */
+form {
+  background-color: #333; /* Form background color */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Input fields */
+input[type="email"],
+input[type="password"] {
+  background-color: #444; /* Input field background color */
+  color: #fff; /* Input text color */
+  border: 1px solid #666; /* Input field border color */
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* Error messages */
+p {
+  color: #ff9999; /* Error message color */
+}
+
+h1{
+  color: red;
+}
+
+
+input::placeholder{
+  color: azure;
+}
+
+/* Buttons */
+button[type="submit"] {
+  background-color: #666; /* Submit button background color */
+  color: #fff; /* Submit button text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Hover effect for buttons */
+button[type="submit"]:hover {
+  background-color: red; /* Hover background color */
+}
+
+/* Close button */
+#btn button {
+  background-color: red;
+  color: azure; /* Close button text color */
+}
+
+#f_Pass{
+  color: rgb(161, 25, 161);
+}

@@ -1,0 +1,44 @@
+<span id="btn">
+    <button mat-icon-button style="float: right;" matDialogClose>
+      <mat-icon>close</mat-icon>
+    </button>
+  </span>
+  
+  <div class="card">
+    <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+      <div class="card-header">
+        <h2>Update User</h2>
+      </div>
+      <div class="card-body">
+  
+        <div class="form-group">
+          <label>Phone Number:</label>
+          <input type="tel" formControlName="phoneNo" placeholder="Phone Number" />
+          <div *ngIf="updateForm.get('phoneNo')!.hasError('required')">
+            Phone Number is required.
+          </div>
+          <div *ngIf="updateForm.get('phoneNo')!.hasError('pattern')">
+            Phone Number must consist of 10 digits.
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Set New Password:</label>
+          <input type="password" formControlName="password" placeholder="New Password" />
+          <div *ngIf="updateForm.get('password')!.hasError('required')">
+            Password is required.
+          </div>
+          <div *ngIf="updateForm.get('password')!.hasError('minlength')">
+            Password must be at least 6 characters long.
+          </div>
+        </div>
+     
+        <div class="form-group">
+          <label>Profile Picture:</label>
+          <input type="file" (change)="onFileSelected($event)" />
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit">Update User</button>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,350 @@
+#container1{
+    margin-top: 80px;
+    display: block;
+    width: 100%;
+    background-color: black;
+  }
+  #container2{
+      color: white;
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 100%;
+  }
+  
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #1f2047cc;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    bottom: 100px;
+    align-items: center;
+    z-index: 1;
+    transform: translateX(-50%);
+    font-size: 16px;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  
+  
+  .card{
+      min-width: auto;
+      min-height: auto;
+      margin-top: 50px;
+  }
+  a{
+      color: white;
+      text-decoration: none;
+  }
+  .cont{
+      margin:20px 50px;
+      width: 80%;
+      text-align: center;
+  }
+  .cont h1{
+      font-size: 38px;
+      font-family: 'Amazon Ember,Amazon Arabic Ember,Arial,sans-serif!important';
+  }
+  .cont p{
+      color: gray;
+      text-shadow: 0px 0px 0px whitesmoke;
+      font-size: 17px;
+      letter-spacing: 2px;
+      font-family:sans-serif;
+  }
+  button{
+      padding: 12px 20px;
+      font-size: 22px;
+      border-radius: 10px;
+      background-color:#E50914;
+      z-index: 1;
+      margin-top: 50px;
+  }
+  .buttons{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 500px;
+  }
+  .table {
+      width: 100%;
+      color: whitesmoke;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    tr{
+      border: 2px solid black;
+    }
+    td{
+      padding-top: 30px;
+    }
+    td img{
+      border-radius: 10px;
+    }
+    .setMargin{
+      padding-top: 55px;
+    }
+  
+  
+    .previous{
+      text-decoration: none;
+      font-size: 35px;
+      margin-bottom: 5px;
+      color: whitesmoke;
+      position: absolute;
+      top: 100px;
+      left: 35px;
+      font-weight: 600;
+    }
+  
+  
+    .tooltip-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      background-color: #000;
+      color: #fff;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    #fav:hover .tooltip-text {
+      opacity: 1;
+      margin-top: 40px;
+    }
+    
+    .social-icons{
+      margin-left: 200px;
+    }
+    
+    .social-icons ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .social-icons ul li {
+      display: inline-block;
+    }
+    
+    .social-icons ul li a {
+      color: blue;
+      font-size: 20px;
+    }
+   .foot_para{
+    line-height: 10px;
+    color: gray;
+  }  
+  
+  
+  
+  
+    @media screen and (max-width:1250px) and (min-width:750px) {
+  
+      #container2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        width: auto;
+        height: auto;
+    
+      } 
+  
+      .cont{
+        width: 100%;
+        margin: 0px;
+    }
+  
+    #cast{
+      margin-left: -35px;
+    }
+      .cont p {
+        font-size: 12px;
+      }
+    
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+      
+      button {
+        margin: 10px;
+        padding: 10px 15px;
+        font-size: 20px;
+      } 
+  
+      .card {
+        width: 50%;
+        height: 50%;
+        margin: auto;
+    
+      }
+    
+      .navbar-expand-lg .navbar-collapse {
+        display: flex;
+        flex-basis: auto;
+      }
+  
+    }
+    
+    @media screen and (max-width:750px) and (min-width:250px) {
+    
+    
+      #container2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+  
+      .cont{
+        width: 100%;
+        margin: 0px;
+    }
+      .navbar-expand-lg .navbar-collapse {
+        display: flex;
+        flex-basis: auto;
+      }
+    
+      .cont p {
+        color: gray;
+        text-shadow: 0px 0px 0px whitesmoke;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-family: sans-serif;
+        width: 100%;
+        height: 100%;
+      }
+    
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+      
+      button {
+        margin: 10px;
+        padding: 7px 10px;
+        font-size: 20px;
+      } 
+  
+      .card {
+        width: auto;
+        height: auto;
+    
+      }
+     
+      .social-icons{
+        margin-left: 100px;
+      }
+    
+    }
+  
+    @media (max-width: 500px) {
+      #container2 {
+        width: 130%; 
+        margin: 0px;
+      } 
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        margin: auto;
+      }
+      
+      button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 18px;
+      } 
+      .footer{
+        margin-left: 30px;
+      }
+      .social-icons{
+        margin-left: 40px;
+      }
+      .foot{
+        width: 127%;
+      }
+    }
+
+
+
+    /* CSS to reduce image size and show cards in columns and rows */
+#main {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+  transition: transform 0.2s; /* Add a smooth transition for the transform property */
+}
+
+.example-card:hover {
+  transform: translate(0, -5px); /* Move the card 5 pixels up when hovering */
+}
+.example-card{
+  margin: 10px;
+  max-width: 170px;
+  border: 2px solid #008000;
+  box-shadow: rgba(248, 247, 247, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+#im {
+  max-width: 170px;
+  background-size: cover;
+  /* Adjust the maximum image height as needed */
+  
+}
+#ti{
+  font-family: Manga Temple;
+  color: #008000;
+  font-weight: bolder;
+  font-size: 15px;
+}
+/* Add styles for the card content, header, and actions as desired */
+
+
+#lis{
+  font-family: Comic Sans MS;
+  color: #b70f17;
+}
+#ite{
+  font-family: Waltograph;
+  color: #cccccc;
+  text-align: justify;
+}
+
+
+    
+
+    

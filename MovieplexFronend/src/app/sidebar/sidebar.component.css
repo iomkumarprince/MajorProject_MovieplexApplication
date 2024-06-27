@@ -1,0 +1,86 @@
+*{    
+  color: azure;  
+  padding-left: 10px;
+}
+
+.sidebar {
+    background-color: rgba(3, 3, 3, 0.3); 
+    position: fixed;
+    top: 79px;
+    left: 0;
+    width: 80px;
+    height:90%;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    text-align: center;
+    justify-content: center;
+    z-index: 99;   
+    transition: width 0.2s;
+  }
+  
+  .sidebar.expanded {
+    width: 170px;
+  }
+  
+  .sidebar-icon {
+    background-color: transparent; 
+    display: flex;
+    color: whitesmoke;
+    flex-direction: column;
+    align-items: self-start;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .sidebar-icon i {
+    background-color: transparent;
+    font-size: 24px;
+    padding-top: 30px;
+    margin-bottom: 5px;
+    text-align: start;
+    position: relative;
+    right: 13px;
+  }
+
+  .sidebar-icon i:hover {   
+    background-color: transparent;
+    border-color: red;
+    color: red; 
+  }
+  
+  .sidebar-tooltip {
+    background-color: transparent;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    position: relative;
+    right: 11px;
+  }
+  
+  .sidebar-icon:hover .sidebar-tooltip  {
+   background-color: transparent;   
+    border-color: red;
+    color: red; 
+  }
+
+   .sidebar-icon:hover{       
+    border-color: red;
+    color: red;
+  } 
+  
+  a{
+    background-color: transparent; 
+    font-size: large;
+    text-decoration: none;
+    color: whitesmoke;
+    text-shadow: 0px 0px 20px azure;
+  }
+
+  a:hover{
+    text-shadow: 0px 0px 20px red;
+  }
+
+
+  
+

@@ -1,0 +1,119 @@
+<div class="container-fluid g-0">
+  <main class="cont2">
+    
+    <div class="recommended">
+      <h1>Trending Movies</h1>
+      <div class="carousel">
+        <div class="card-container" #cardContainer>
+          <div class="card-wrapper">
+            <div *ngFor="let item of movieList" class="card">
+              <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+                [routerLink]="['/movies', item.id]"><br>
+            </div>
+          </div>
+        </div>
+        <button class="prev" (click)="scroll('left')">❮</button>
+        <button class="next" (click)="scroll('right')">❯</button>
+      </div>
+    </div>
+
+    <div class="action">
+      <h1>Action Movies</h1>
+      <div class="carousel">
+        <div class="card-container" #cardContainer1>
+          <div class="card-wrapper">
+            <div *ngFor="let item of actionMovies" class="card">
+              <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+                [routerLink]="['/movies',item.id]"><br>
+            </div>
+          </div>
+        </div>
+        <button class="prev" (click)="scroll1('left')">❮</button>
+        <button class="next" (click)="scroll1('right')">❯</button>
+      </div>
+    </div>
+
+    <div class="action">
+      <h1>Comedy Movies</h1>
+      <div class="carousel">
+        <div class="card-container" #cardContainer2>
+          <div class="card-wrapper">
+            <div *ngFor="let item of comedyMovies" class="card">
+              <img [src]="'https://image.tmdb.org/t/p/w500/' + item.poster_path" alt="Movie Poster" width="200px"
+                height="300px" [routerLink]="['/movies', item.id]">
+            </div>
+          </div>
+        </div>
+        <button class="prev" (click)="scroll2('left')">❮</button>
+        <button class="next" (click)="scroll2('right')">❯</button>
+      </div>
+    </div>
+
+
+    <div class="action">
+      <h1>Animation Movies</h1>
+      <div class="carousel">
+        <div class="card-container" #cardContainer3>
+          <div class="card-wrapper">
+            <div *ngFor="let item of animatedMovies" class="card">
+              <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+                [routerLink]="['/movies',item.id]"><br>
+            </div>
+          </div>
+        </div>
+        <button class="prev" (click)="scroll3('left')">❮</button>
+        <button class="next" (click)="scroll3('right')">❯</button>
+      </div>
+    </div>
+
+    <div class="action">
+      <h1>Documentary Movies</h1>
+      <div class="carousel">
+        <div class="card-container" #cardContainer4>
+          <div class="card-wrapper">
+        <div *ngFor="let item of documentaryMovies" class="card">
+            <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+              [routerLink]="['/movies',item.id]"><br>
+          </div>
+        </div>
+      </div>
+      <button class="prev" (click)="scroll4('left')">❮</button>
+      <button class="next" (click)="scroll4('right')">❯</button>
+    </div>
+    </div>
+
+    <div class="action">
+      <h1>Science Fiction Movies</h1>
+      <div class="carousel">
+        <div class="card-container" #cardContainer5>
+          <div class="card-wrapper">
+        <div *ngFor="let item of scienceFictionMovies" class="card">
+            <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+              [routerLink]="['/movies',item.id]"><br>
+          </div>
+        </div>
+      </div>
+      <button class="prev" (click)="scroll5('left')">❮</button>
+      <button class="next" (click)="scroll5('right')">❯</button>
+    </div>
+    </div>
+
+    <div class="action">
+      <h1>Thriller Movies</h1>
+      <div class="carousel">
+        <div class="card-container" #cardContainer6>
+          <div class="card-wrapper">
+        <div *ngFor="let item of thrillerMovies" class="card">
+            <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+              [routerLink]="['/movies',item.id]"><br>
+          </div>
+        </div>
+      </div>
+      <button class="prev" (click)="scroll6('left')">❮</button>
+      <button class="next" (click)="scroll6('right')">❯</button>
+    </div>
+    </div>
+    <app-footer></app-footer>
+  </main>
+  
+</div>

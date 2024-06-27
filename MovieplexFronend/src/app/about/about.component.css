@@ -1,0 +1,142 @@
+app-header{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 4rem;
+    z-index: 3;
+}
+.container-fluid {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-color: black;
+    padding-left: 100px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 28.3%;
+    height: auto;
+    margin-bottom: 16px;
+    margin: auto;
+}
+
+.email{
+    color: red;
+    font-size: 17px;
+}
+.card {
+    box-shadow: 0px 0px 10px azure;
+    margin: 8px;
+    margin-bottom: 55px;
+    text-align: center;
+    max-width: 350px;
+    min-height: 400px;
+    background-color: rgb(41, 38, 38);
+    color: azure;
+}
+
+.about-section {
+    padding: 50px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    text-align:justify;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: black;
+    background-color: yellowgreen;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+img{
+    margin: auto;
+    border-radius: 50%;
+}
+h1{
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 50px;
+}
+h1, h2{
+    font-family: 'Amazon';
+}
+#team{
+    padding-top: 120px;
+}
+p{
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.previous{
+    text-decoration: none;
+    font-size: 35px;
+    margin-bottom: 5px;
+    color: whitesmoke;
+    position: absolute;
+    top: 100px;
+    left: 35px;
+    font-weight: 600;
+  }
+
+
+ @media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .card{
+        margin: auto;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .card{
+        margin: auto;
+        margin-bottom: 30px;
+    }
+}

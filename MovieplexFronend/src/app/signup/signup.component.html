@@ -1,0 +1,95 @@
+<span id="btn" *ngIf="shown">
+  <button mat-icon-button style="float: right;" matDialogClose>
+    <mat-icon>close</mat-icon>
+  </button>
+</span>
+
+<form [formGroup]="registrationForm" (ngSubmit)="addUser()" *ngIf="show">
+  <h1>Sign Up</h1>
+  <input type="text" placeholder="Name" formControlName="name" id="name" />
+  <div *ngIf="registrationForm.get('name')?.errors?.['pattern']">
+    <span><i class="material-icons">warning</i>
+      <p>Name Should contain only alphabets</p>
+    </span>
+  </div>
+  <div *ngIf="registrationForm.get('name')?.errors?.['maxlength']">
+    <span><i class="material-icons">warning</i>
+      <p>Only 30 characters allowed</p>
+    </span>
+  </div>
+  <div
+    *ngIf="registrationForm.get('name')?.invalid && (registrationForm.get('name')?.dirty || registrationForm.get('name')?.touched)">
+    <div *ngIf="registrationForm.get('name')?.errors?.['required']">
+      <span><i class="material-icons">warning</i>
+        <p>Name is <strong>required</strong></p>
+      </span>
+    </div>
+  </div>
+
+  <input type="email" placeholder="Email" formControlName="email" id="email" />
+  <div
+    *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+    <div
+      *ngIf="registrationForm.get('email')?.errors?.['emailsAreValidCheck']===false || registrationForm.get('email')?.errors?.['pattern'] ">
+      <span><i class="material-icons">warning</i>
+        <p>Enter valid Email Id</p>
+      </span>
+    </div>
+    <div *ngIf="registrationForm.get('email')?.errors?.['required']">
+      <span><i class="material-icons">warning</i>
+        <p>Email is <strong>required</strong></p>
+      </span>
+    </div>
+  </div>
+
+  <input type="password" placeholder="Password" formControlName="password" id="password" />
+  <div
+    *ngIf="registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
+    <div *ngIf="registrationForm.get('password')?.errors?.['required']">
+      <span><i class="material-icons">warning</i>
+        <p>Password is <strong>required</strong></p>
+      </span>
+    </div>
+    <div *ngIf="registrationForm.get('password')?.errors?.['pattern']">
+      <span><i class="material-icons">warning</i>
+        <p>Password must match the required pattern <br>i.e Capital letters, small letters, Numbers and Special
+          characters</p>
+      </span>
+    </div>
+  </div>
+
+  <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" id="confirmPassword" />
+  <div
+    *ngIf="registrationForm.get('confirmPassword')?.errors?.['required']  && registrationForm.get('confirmPassword')?.touched">
+    <span><i class="material-icons">warning</i>
+      <p>Confirm Password is Required</p>
+    </span>
+  </div>
+  <div
+    *ngIf="registrationForm.get('mustMatchValidator')?.errors?.['required']  && registrationForm.get('confirmPassword')?.touched">
+    <span><i class="material-icons">warning</i>
+      <p>Password and Confirm Password must be same</p>
+    </span>
+  </div>
+
+  <input type="text" placeholder="Phone Number" formControlName="phoneNo" id="phoneNo" />
+  <div
+    *ngIf="registrationForm.get('phoneNo')?.invalid && (registrationForm.get('phoneNo')?.dirty || registrationForm.get('phoneNo')?.touched)">
+    <div *ngIf="registrationForm.get('phoneNo')?.errors?.['required']">
+      <span><i class="material-icons">warning</i>
+        <p>Phone Number is <strong>required</strong></p>
+      </span>
+    </div>
+    <div *ngIf="registrationForm.get('phoneNo')?.errors?.['pattern']">
+      <span><i class="material-icons">warning</i>
+        <p>Valid Phone Number contains 10 digits starting with 7/8/9</p>
+      </span>
+    </div>
+  </div>
+
+  <input type="file" (change)="onImageUpload($event)" accept="image/*">
+
+
+
+  <button type="submit">Submit</button>
+</form>

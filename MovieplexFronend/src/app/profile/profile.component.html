@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <a href="#" onclick="back()" class="previous round">&#8249;</a>
+    <div class="card">
+        <div class="image-container">
+            <img [src]="imageSrc" alt="name" class="image">
+            <p style="padding-top: 10px;">{{values.name}}</p>
+        </div>
+        <div class="details">
+            <p>{{values.email}}</p>
+            <p>{{values.phoneNo}}</p>
+        </div>  
+        <button (click)="edit(values)">update</button>    
+        <div class="social-media">
+            <h3> ----- Follow -----<br>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </h3>
+        </div>
+    </div>
+</div>

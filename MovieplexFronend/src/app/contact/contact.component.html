@@ -1,0 +1,74 @@
+    <header>
+      <h1 style="color: red;">Contact Us</h1>
+      <p id="text">
+        Mobile apps have the advantage of utilizing features of a mobile device like a camera, contact list, GPS, phone
+        calls, accelerometer, compass, etc. Such device features, when used within an app, can make the user experience
+        interactive and fun.
+      </p>
+    </header>
+    <div class="content">
+      <div class="content-form">
+        <section>
+          <i class="fa fa-map-marker fa-2x" aria-hidden="true" style="color: red;"></i>
+          <h2 style="color: red;">Address</h2>
+          <p style="text-align: left; padding-left: 120px;">
+            NIIT Limited<br>
+            85, Sector 32, Institutional<br>
+            Gurgaon 122001<br>
+            India
+          </p>
+        </section>
+
+        <section>
+          <i class="fa fa-phone fa-2x" aria-hidden="true" style="color: red;"></i>
+          <h2 style="color: red;">Contact</h2>
+          <p>(+91) 9326688553</p>
+        </section>
+
+        <section>
+          <i class="fa fa-envelope fa-2x" aria-hidden="true" style="color: red;"></i>
+          <h2 style="color: red;">Email</h2>
+          <p>movieplexthecinema@gmail.com</p>
+        </section>
+      </div>
+    </div>
+
+    <div>
+      <h1 style="margin:auto; margin-left: 610px; color: red; padding-bottom: 10px; letter-spacing: 1px;">Raise a query...</h1>
+    </div>
+
+    <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
+      <div class="form">
+        <div class="right">
+          <div class="contact-form">
+            <label class="form-label">Enter Full Name</label>
+            <input type="text" formControlName="fullName" placeholder="Enter full name" required>
+            <p class="error" *ngIf="fullName?.errors?.['required'] && fullName?.touched">
+              Full Name is required.
+            </p>
+          </div>
+
+          <div class="contact-form">
+            <label class="form-label">Enter Email</label>
+            <input type="email" formControlName="userEmail" placeholder="Enter your email" required>
+            <p class="error" *ngIf="userEmail?.errors?.['required'] && userEmail?.touched">
+              Email is required.
+            </p>
+          </div>
+
+          <div class="contact-form">
+            <label class="form-label">Enter the Message</label>
+            <textarea name="text" formControlName="text"></textarea>
+            <p class="error" *ngIf="text?.errors?.['required'] && text?.touched">
+              Message is required.
+            </p>
+          </div>
+
+          <div class="contact-form">
+            <button type="submit" name="submit" id="btn" [disabled]="contactForm.invalid"
+              (click)="contact()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+   

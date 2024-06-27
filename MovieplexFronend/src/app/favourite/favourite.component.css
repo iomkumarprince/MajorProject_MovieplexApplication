@@ -1,0 +1,230 @@
+* {
+  background-color: black;
+}
+
+.album {
+  margin-top: 12vh;
+}
+
+.card-table {
+  width: 100%;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 10vw;
+  width: 10vw;
+  margin-bottom: 5vh;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 5vh;
+}
+
+#title-th,
+#title-td {
+  font-size: 5rem;
+}
+
+th,
+td {
+  padding: 1vh;
+  font-size: 2.5vh;
+  color: whitesmoke;
+}
+
+.video-link a {
+  display: block;
+  text-align: center;
+  padding: 1vh;
+  width: 20vw;
+  border-radius: 1vh;
+  color: whitesmoke;
+  position: absolute;
+  top: 265px;
+  left: 800px;
+  background-color: purple;
+  text-decoration: none;
+}
+
+.video-link #button {
+  display: block;
+  text-align: center;
+  padding: 1vh;
+  width: 20vw;
+  border: none;
+  border-radius: 1vh;
+  color: whitesmoke;
+  margin-left: 85px;
+  background-color: #E50914;
+  text-decoration: none;
+}
+
+.previous {
+  text-decoration: none;
+  font-size: 5vh;
+  margin-bottom: 1vh;
+  color: whitesmoke;
+  position: absolute;
+  top: 15vh;
+  left: 3vh;
+  font-weight: 600;
+}
+
+#fav {
+  text-align: center;
+  font-size: 5vh;
+  /* text-shadow: 0px 0px 0px gold;  */
+  color: #E50914;
+  font-family: 'Amazon Ember,Amazon Arabic Ember,Arial,sans-serif!important';
+  padding: 10px;
+}
+
+#title th,
+#title td {
+  font-size: 2.5vh;
+}
+
+#overview td {
+  text-align: justify;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  padding: 2vh;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-info,
+.social-icons {
+  flex-basis: 50%;
+}
+
+.contact-info h3,
+.social-icons h3 {
+  margin-top: 0;
+}
+
+.contact-info p,
+.social-icons ul {
+  margin-bottom: 1vh;
+}
+
+.social-icons ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.social-icons li {
+  margin-right: 1vh;
+}
+
+.copy {
+  text-align: center;
+  margin-top: 2vh;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer {
+    width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .social-icons {
+    flex-basis: 100%;
+  }
+
+  .social-icons h3 {
+    margin-top: 2vh;
+  }
+
+  .copy {
+    font-size: 2vh;
+  }
+
+}
+
+#mat {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Adjust the card width as needed */
+  grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
+  /* Create multiple rows */
+  gap: 20px;
+  /* Adjust the gap between columns and rows as needed */
+  justify-items: center;
+  align-content: start;
+  /* Align content to the top of each cell */
+}
+
+
+.example-card {
+  background-color: black;
+  color: white;
+  border: 2px solid red;
+  width: 100%;  
+}
+
+#imag {
+  padding-top: 5px;
+  max-height: 200px;
+  max-width: 95%; 
+  padding-left: 20px;
+}
+
+mat-card-content {
+  text-align: justify;
+  padding-top: 10px;
+  height: 100%;
+}
+
+mat-card-title{
+  padding-left: 8px;
+}
+
+#bu,
+#btn {
+ margin:10px;
+ width: 250px;
+}
+
+p{
+  padding-top: 10px;
+}
+
+#btn {
+  margin-left: 200px;
+}

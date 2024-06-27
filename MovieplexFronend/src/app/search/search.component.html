@@ -1,0 +1,15 @@
+
+<a routerLink="#" onclick="history.back()" class="previous round">&#8249;</a>
+<div class="row mt-5" id="row">
+    <h1>Results for " {{paramValue}} " </h1><br>
+    <div class="col-lg-4" *ngFor="let s of searchResult">
+        <div class="row">
+            <div class="col-lg-3 mt-4 mb-4" *ngIf="s.poster_path">
+                <img src="https://image.tmdb.org/t/p/original/{{ s.poster_path }}" [routerLink]="['/movies',s.id]" alt="error" >                
+            </div>
+            <div class="col-lg-9 mt-4 mb-4">
+                <h4>{{s.original_title}}</h4>
+            </div>
+        </div>
+    </div>   
+</div> 

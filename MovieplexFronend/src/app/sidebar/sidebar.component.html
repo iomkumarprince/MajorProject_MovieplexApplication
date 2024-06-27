@@ -1,0 +1,43 @@
+<div class="sidebar" [class.expanded]="isSidebarExpanded" (mouseenter)="expandSidebar()"
+  (mouseleave)="collapseSidebar()">
+  <div class="sidebar-icon">
+    <a routerLink="">
+      <i class="fa-solid fa-house"></i>
+      <span *ngIf="isSidebarExpanded" class="sidebar-tooltip">
+        Home
+      </span>
+    </a>
+  </div>
+  <div class="sidebar-icon">
+    <a routerLink="about">
+      <i class="fa-solid fa-circle-info"></i>
+      <span *ngIf="isSidebarExpanded" class="sidebar-tooltip">
+        About
+      </span>
+    </a>
+  </div>
+  <div class="sidebar-icon">
+    <a routerLink="/fav">
+      <i class="fa-solid fa-heart"></i>
+      <span *ngIf="isSidebarExpanded" class="sidebar-tooltip">
+        Favourite
+      </span>
+    </a>
+  </div>
+  <div class="sidebar-icon">
+    <a routerLink="profile">
+      <i class="fa-solid fa-circle-info"></i>
+      <span *ngIf="isSidebarExpanded" class="sidebar-tooltip">
+        Profile
+      </span>
+    </a>
+  </div>
+  <div class="sidebar-icon">
+    <a routerLink="contact">
+      <i class="fa-solid fa-circle-info"></i>
+      <span *ngIf="isSidebarExpanded" class="sidebar-tooltip">
+        Contact
+      </span>
+    </a>
+  </div>
+</div>

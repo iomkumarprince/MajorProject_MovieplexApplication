@@ -1,0 +1,25 @@
+<div class="album">
+  <a routerLink="#" onclick="history.back()" class="previous round">&#8249;</a>
+  <div class="container">
+    <h1 id="fav">My Favourite</h1>    
+    <div id="mat">
+      <mat-card class="example-card" *ngFor="let row of favList">
+        <mat-card-header>
+          <mat-card-title>{{row.title}}</mat-card-title>
+        </mat-card-header>
+        <img id="imag" mat-card-image src="https://image.tmdb.org/t/p/w500/{{row.poster_path}}"
+          alt="">
+        <mat-card-content>
+          <p>
+            {{row.overview}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button id="bu" mat-raised-button color="warn" (click)="delete(row.id)">DELETE</button>
+          <button  mat-raised-button color="primary" [routerLink]="['/movies', row.id]" id="btn">Synopsis</button>
+
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

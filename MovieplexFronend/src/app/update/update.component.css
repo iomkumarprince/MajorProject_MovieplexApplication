@@ -1,0 +1,101 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+btn {
+  background-color: #666; 
+  color:azure;
+}
+
+btn:hover {
+  background-color: red; 
+}
+
+.card {
+  background-color: #444;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.card-header {
+  background-color: #222;
+  /* padding: 10px; */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="tel"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #666;
+  background-color: #555;
+  color: #fff;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: red;
+  color: azure;
+}
+
+div[role="alert"] {
+  color: #ff4444;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+mat-icon {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 10px;
+  }
+  input[type="tel"],
+  input[type="password"],
+  input[type="file"] {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    margin: 5px;
+  }
+  input[type="tel"],
+  input[type="password"],
+  input[type="file"] {
+    width: 100%;
+  }
+  button[type="submit"] {
+    width: 100%;
+  }
+}

@@ -1,0 +1,43 @@
+<nav class="nav">
+  <div class="logo-icon">
+    <div>
+    <i class="fas fa-film"></i>
+   </div><div>
+      <span id="logo" class="logo-text">Movie<span style="color: azure;">plex</span></span>
+    </div>
+  </div>
+ 
+  <div class="search-container" (click)="expandSearch()">
+    <form [formGroup]="searchFormValue">
+        <input type="text" class="search-input" formControlName="movieName" placeholder="Search...">
+        <button class="search-icon" (click)="sendValues()">Search</button>
+    </form>
+</div>
+ 
+  <input type="checkbox" id="click">
+  <label for="click" class="menu-btn">
+    <i class="fas fa-bars"></i>
+  </label>
+  <ul class="links">
+    <li *ngIf="welcome">
+     welcome {{userName}}
+    </li>
+    <li *ngIf="!flag">
+      <mat-dialog-actions>
+        <a (click)="openLoginDialog()">Login</a>
+      </mat-dialog-actions>
+    </li>
+    <li *ngIf="!flag">
+      <mat-dialog-actions>
+      <a (click)="openSignupDialog()">Sign Up</a>
+    </mat-dialog-actions>
+    </li>  
+    <li *ngIf="flag">
+      <img [src]="imagePath" width="70px" height="70px" style="border-radius: 50%;" id="img"/>
+      <mat-dialog-actions>
+      <a (click)="logout()">Logout</a>
+    </mat-dialog-actions>
+    </li>
+  </ul>  
+</nav>
+
